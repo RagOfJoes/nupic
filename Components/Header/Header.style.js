@@ -1,18 +1,26 @@
+import { Theme } from '@material-ui/core/styles';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
-const headerStyle = (theme) => ({
+/**
+ *
+ * @param {Theme} theme
+ */
+const headerStyle = ({ palette, ...theme }) => ({
 	root: {
-		border: 'none',
+		borderLeft: 'none',
+		borderRight: 'none',
 		zIndex: theme.zIndex.drawer + 1,
-		color: theme.palette.text.primary,
-		borderBottom: theme.palette.type === 'light' ? '1px solid rgba(0, 0, 0, 0.12)' : '1px solid rgba(255, 255, 255, 0.12)',
+		backgroundColor: palette.background.default,
 	},
 	logo: {
 		width: '100%',
 		height: '100%',
-		cursor: 'pointer',
-		backgroundColor: 'transparent',
-		userSelect: 'none',
+		maxWidth: 125,
+
+		'& > svg': {
+			cursor: 'pointer',
+			userSelect: 'none',
+		},
 	},
 });
 

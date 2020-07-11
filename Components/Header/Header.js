@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { useHeaderStyle } from './Header.style';
-import { Typography, Avatar } from '@material-ui/core';
 
 export default () => {
 	const styles = useHeaderStyle();
@@ -14,7 +13,7 @@ export default () => {
 				<Grid container wrap="nowrap" direction="row" component={Toolbar} justify="space-between">
 					<Link href="/">
 						<Grid item container spacing={1} alignItems="center">
-							<Grid item className={styles.logo}>
+							<Grid item component="span" className={styles.logo}>
 								<Logo />
 							</Grid>
 						</Grid>
