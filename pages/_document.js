@@ -1,6 +1,7 @@
 import React from 'react';
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { NoSsr } from '@material-ui/core';
 
 export default class MyDocument extends Document {
 	render() {
@@ -8,7 +9,7 @@ export default class MyDocument extends Document {
 			<Html lang="en">
 				<Head>
 					{/* Use minimum-scale=1 to enable GPU rasterization */}
-					<meta name="theme-color" content="#424242" />
+					<meta name="theme-color" content="#4C364D" />
 
 					<meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
 					<meta name="author" content="Victor Ragojos - https://github.com/RagOfJoes" />
@@ -22,10 +23,13 @@ export default class MyDocument extends Document {
 
 					<link rel="stylesheet" type="text/css" href="/stylesheets/nprogress.css" />
 					{/* <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" /> */}
-					<link
-						rel="stylesheet"
-						href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
-					/>
+					<NoSsr>
+						<link
+							crossOrigin
+							rel="stylesheet"
+							href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+						/>
+					</NoSsr>
 				</Head>
 				<body style={{ overflowX: 'hidden' }}>
 					<Main />
