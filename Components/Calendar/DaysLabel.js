@@ -1,9 +1,10 @@
 import moment from 'moment';
+import { memo } from 'react';
 import useDaysLabelStyle from './DaysLabel.style';
 import TableCell from '@material-ui/core/TableCell';
 import Typography from '@material-ui/core/Typography';
 
-export default (props) => {
+export default memo(() => {
 	const today = moment().day();
 	const styles = useDaysLabelStyle();
 
@@ -52,4 +53,4 @@ export default (props) => {
 			</TableCell>
 		</>
 	);
-};
+});

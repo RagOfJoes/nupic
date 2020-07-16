@@ -6,8 +6,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
  *
  * @param {Theme} theme
  */
-export const weekStyle = ({ shape, spacing, palette, transitions, breakpoints }) => ({
-	cell: {
+export const cellStyle = ({ shape, spacing, palette, transitions, breakpoints }) => ({
+	inactiveCell: {
 		height: '100%',
 		minHeight: 160,
 		overflow: 'hidden',
@@ -22,7 +22,7 @@ export const weekStyle = ({ shape, spacing, palette, transitions, breakpoints })
 			display: 'none',
 		},
 	},
-	day: {
+	activeCell: {
 		height: '100%',
 		minHeight: 160,
 		overflow: 'hidden',
@@ -33,7 +33,7 @@ export const weekStyle = ({ shape, spacing, palette, transitions, breakpoints })
 			minHeight: 100,
 		},
 	},
-	grid: {
+	inactiveGrid: {
 		height: '100%',
 		borderRadius: shape.borderRadius * 3,
 		backgroundColor: palette.background.default,
@@ -48,11 +48,11 @@ export const weekStyle = ({ shape, spacing, palette, transitions, breakpoints })
 			...getInsetNeumorph({ darken: 0.17, spread: 2.2, blurLength: 5.2 }),
 		},
 	},
-	today: {
-		// backgroundColor: palette.secondary.main,
+	selected: {
+		...getInsetNeumorph({ darken: 0.17, spread: 2.2, blurLength: 5.2 }),
 	},
 });
 
-const useWeekStyles = makeStyles(weekStyle, { name: 'CalendarWeek', index: 20 });
+const useCellStyles = makeStyles(cellStyle, { name: 'CalendarCell', index: 20 });
 
-export default useWeekStyles;
+export default useCellStyles;
