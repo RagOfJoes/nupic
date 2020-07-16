@@ -1,7 +1,7 @@
 // server.js
-const { createServer } = require('http');
-const { parse } = require('url');
 const next = require('next');
+const { parse } = require('url');
+const { createServer } = require('http');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev, quiet: true });
