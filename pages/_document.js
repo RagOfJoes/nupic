@@ -30,6 +30,12 @@ export default class MyDocument extends Document {
 							href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
 						/>
 					</NoSsr>
+					<script
+						async
+						defer
+						id="google-maps"
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmPw7FX8jCr6nBkaLz4njuPJu2rxuWolk&libraries=places"
+					></script>
 				</Head>
 				<body style={{ overflowX: 'hidden' }}>
 					<Main />
