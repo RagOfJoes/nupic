@@ -8,7 +8,8 @@ import 'react-image-crop/dist/ReactCrop.css';
 import { useApollo } from 'lib/apolloClient';
 import defaultSeoProps from 'next-seo.config';
 import React, { useEffect, memo } from 'react';
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider } from '@apollo/client';
+import '@brainhubeu/react-carousel/lib/style.css';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 
